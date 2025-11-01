@@ -7,8 +7,12 @@ private:
 	std::string itemCode;
 public:
 	Item(std::string newName, int newPrice, std::string newItemCode);
-	std::string getItemName();
 	~Item();
+	std::string getItemName();
+	void setItemName(std::string setNewName);
 	int getItemPrice();
+	void setItemPrice(int setNewPrice);
 	std::string getItemCode();
+	void setItemCode(std::string setNewItemCode);
+
 };
