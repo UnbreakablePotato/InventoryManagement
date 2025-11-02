@@ -16,6 +16,7 @@ public:
 	void setItemPrice(double setNewPrice);
 	std::string getItemCode();
 	void setItemCode(std::string setNewItemCode);
+	virtual void itemType();
 	Item(){}
 
 };
@@ -32,4 +33,20 @@ public:
 	void setExpirationDate(std::string newExpirationDate);
 	bool getVegetarianStatus();
 	void setVegitarianStatus(bool isVegi);
+	void itemType();
+};
+
+class electronicItem : public Item
+{
+private:
+	bool isWireless;
+	std::string powerSource;
+private:
+	electronicItem(std::string newName, double newPrice, std::string newItemCode, bool isWire, std::string sourceofpower);
+	~electronicItem();
+	bool getIsWireless();
+	void setIsWirelss(bool isWire);
+	std::string getPowerSource();
+	void setPowerSource(std::string setPower);
+	void itemType() override;
 };

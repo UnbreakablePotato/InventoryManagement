@@ -13,7 +13,7 @@ Item::Item(std::string newName, double newPrice, std::string newItemCode) :
 
 Item::~Item()
 {
-	std::cout << Item::getItemCode() << " has gone out of scope" << "\n";
+	std::cout << Item::getItemCode() << " has been destroyed" << "\n";
 }
 
 std::string Item::getItemName()
@@ -46,6 +46,11 @@ void Item::setItemCode(std::string setNewItemCode)
 	itemCode = setNewItemCode;
 }
 
+void Item::itemType()
+{
+	std::cout << "Item has type GENERIC" << "\n";
+}
+
 //Member functions for the foodItem class
 
 foodItem::foodItem(std::string newName, double newPrice, std::string newItemCode, std::string newExpirationDate, bool isVegi) :
@@ -57,6 +62,7 @@ foodItem::foodItem(std::string newName, double newPrice, std::string newItemCode
 
 foodItem::~foodItem()
 {
+	std::cout << "Food item " << foodItem::getItemName() << " has been destroyed" << "\n";
 }
 
 std::string foodItem::getExpirationDate()
@@ -78,6 +84,51 @@ void foodItem::setVegitarianStatus(bool isVegi)
 {
 	isVegetarian = isVegi;
 }
+
+void foodItem::itemType()
+{
+	std::cout << "Item has type FOOD" << "\n";
+}
+
+//Member functions for electronicItem class
+
+electronicItem::electronicItem(std::string newName, double newPrice, std::string newItemCode, bool isWire, std::string sourceofpower) :
+	Item(newName, newPrice, newItemCode),
+	isWireless(isWire),
+	powerSource(sourceofpower)
+{
+}
+
+electronicItem::~electronicItem()
+{
+	std::cout << "Electronic item " << electronicItem::getItemName() << " has been destroyed" << "\n";
+}
+
+bool electronicItem::getIsWireless()
+{
+	return isWireless;
+}
+
+void electronicItem::setIsWirelss(bool isbluetoof)
+{
+	isWireless = isbluetoof;
+}
+
+std::string electronicItem::getPowerSource()
+{
+	return powerSource;
+}
+
+void electronicItem::setPowerSource(std::string setPower)
+{
+	powerSource = setPower;
+}
+
+void electronicItem::itemType()
+{
+	std::cout << "Item type is ELECTRONIC";
+}
+
 
 
 
