@@ -1,18 +1,35 @@
 #pragma once
 #include <string>
-class Item {
+
+class Item 
+{
 private:
 	std::string name;
-	int price;
+	double price{};
 	std::string itemCode;
 public:
-	Item(std::string newName, int newPrice, std::string newItemCode);
+	Item(std::string newName, double newPrice, std::string newItemCode);
 	~Item();
 	std::string getItemName();
 	void setItemName(std::string setNewName);
-	int getItemPrice();
-	void setItemPrice(int setNewPrice);
+	double getItemPrice();
+	void setItemPrice(double setNewPrice);
 	std::string getItemCode();
 	void setItemCode(std::string setNewItemCode);
+	Item(){}
 
+};
+
+class foodItem : public Item
+{
+private:
+	std::string expirationDate;
+	bool isVegetarian;
+public:
+	foodItem(std::string newName, double newPrice, std::string newItemCode, std::string newExpirationDate, bool isVegi);
+	~foodItem();
+	std::string getExpirationDate();
+	void setExpirationDate(std::string newExpirationDate);
+	bool getVegetarianStatus();
+	void setVegitarianStatus(bool isVegi);
 };
