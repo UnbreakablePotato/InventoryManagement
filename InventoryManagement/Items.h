@@ -43,7 +43,7 @@ class electronicItem : public Item
 private:
 	bool isWireless;
 	std::string powerSource;
-private:
+public:
 	electronicItem(std::string newName, double newPrice, std::string newItemCode, bool isWire, std::string sourceofpower);
 	~electronicItem();
 	bool getIsWireless();
@@ -178,3 +178,16 @@ bool enterWireless()
 	return true;
 }
 
+
+std::string enterPowerSource()
+{
+	std::cout << "Enter the power source of your item: ";
+
+	std::string powersource{};
+
+	std::cin >> powersource;
+
+	std::cout << "\n";
+
+	return powersource;
+}
