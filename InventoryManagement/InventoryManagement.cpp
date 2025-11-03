@@ -9,8 +9,6 @@ int main()
 {
     introTUI();
     options();
-    int x{};
-    getInput<int>();
     
 }
 

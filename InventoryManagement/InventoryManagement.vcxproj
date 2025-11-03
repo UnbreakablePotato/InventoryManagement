@@ -123,11 +123,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Inventory.cpp" />
     <ClCompile Include="InventoryManagement.cpp" />
     <ClCompile Include="Items.cpp" />
     <ClCompile Include="TUI.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Inventory.h" />
     <ClInclude Include="Items.h" />
     <ClInclude Include="TUI.h" />
   </ItemGroup>
