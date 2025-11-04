@@ -6,6 +6,6 @@ void introTUI();
 
 void options();
 
-
+void addItemType();
 
 

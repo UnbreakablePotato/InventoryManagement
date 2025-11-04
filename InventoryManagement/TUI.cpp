@@ -13,5 +13,12 @@ void options()
 	std::cout << "If you would like to see the full inventory list, press 1" << "\n";
 	std::cout << "If you would like to add an item, press 2" << "\n";
 	std::cout << "If you would like to delete an item, press 3" << "\n";
-	std::cout << "If you would like to quit the program, press q" << "\n";
+	std::cout << "If you would like to quit the program, press 4" << "\n";
+}
+
+void addItemType() {
+	std::cout << "If you would like to add a generic item, press 1" << "\n";
+	std::cout << "If you would like to add a food item, press 2" << "\n";
+	std::cout << "If you would like to add a electronic item, press 3" << "\n";
+
 }
