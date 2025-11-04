@@ -4,11 +4,39 @@
 #include <map>
 #include "Items.h"
 #include "TUI.h"
+#include "Inventory.h"
 
 int main()
 {
+    Inventory test;
     introTUI();
     options();
+
+    int input{};
+
+    std::cin >> input;
+
+    while (input != 4) {
+        if (input == 1) {
+            //print all inventory's
+        }
+        else if (input == 2) {
+            addItemType();
+            int input{};
+            if (input == 1) {
+                test.pushGenericItem();
+            }
+            else if (input == 2) {
+                test.pushFoodItem();
+            }
+            else if (input == 3) {
+                test.pushElectronicItem();
+            }
+        }
+        else if (input == 3) {
+            //logic to delete items
+        }
+    }
     
 }
 
