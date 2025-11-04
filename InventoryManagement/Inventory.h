@@ -17,5 +17,8 @@ public:
 	void deleteGenericItem();
 	void deleteFoodItem();
 	void deleteElectronicItem();
+	void listGenericItems();
+	void listFoodItems();
+	void listElectronicItems();
 
 };
