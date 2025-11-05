@@ -1,8 +1,8 @@
 #include <iostream>
 #include <string>
 #include <vector>
-#include <map>
-#include "Items.h"
+//#include <map>
+//#include "Items.h"
 #include "TUI.h"
 #include "Inventory.h"
 
@@ -18,24 +18,30 @@ int main()
 
     while (input != 4) {
         if (input == 1) {
-            //print all inventory's
+            test.listGenericItems();
+            test.listFoodItems();
+            test.listElectronicItems();
         }
         else if (input == 2) {
             addItemType();
-            int input{};
-            if (input == 1) {
+            int inputSecondMode{};
+            std::cin >> inputSecondMode;
+            if (inputSecondMode == 1) {
                 test.pushGenericItem();
             }
-            else if (input == 2) {
+            else if (inputSecondMode == 2) {
                 test.pushFoodItem();
             }
-            else if (input == 3) {
+            else if (inputSecondMode == 3) {
                 test.pushElectronicItem();
             }
         }
         else if (input == 3) {
             //logic to delete items
         }
+        std::cout << std::endl;
+        options();
+        std::cin >> input;
     }
     
 }

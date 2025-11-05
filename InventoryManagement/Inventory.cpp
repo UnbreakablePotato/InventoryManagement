@@ -1,4 +1,5 @@
 #include <iostream>
+//#include "Items.h"
 #include "Inventory.h"
 
 void Inventory::pushGenericItem()
@@ -49,4 +50,77 @@ void Inventory::pushElectronicItem()
 
 	electronicInventory.push_back(elecItem);
 
+}
+
+//List member functions
+
+void Inventory::listGenericItems()
+{
+	int count{-1};
+	for (auto i : genericInventory) {
+		count++;
+		std::cout << count << ". " << i.getItemName();
+	}
+}
+
+void Inventory::listFoodItems()
+{
+	int count{ -1 };
+	for (auto i : foodInventory) {
+		count++;
+		std::cout << count << ". " << i.getItemName();
+	}
+}
+
+void Inventory::listElectronicItems()
+{
+	int count{ -1 };
+	for (auto i : electronicInventory) {
+		count++;
+		std::cout << count << ". " << i.getItemName();
+	}
+}
+
+//Delete member functions
+
+void Inventory::deleteGenericItem()
+{
+	std::cout << "Type the number of the item you wish to delete ";
+	int input{};
+	std::cin >> input;
+	std::cout << "\n";
+
+	genericInventory.erase(genericInventory.begin() + input);
+
+	std::cout << "\n";
+
+	std::cout << "Item number " << input << " deleted...";
+}
+
+void Inventory::deleteFoodItem()
+{
+	std::cout << "Type the number of the item you wish to delete ";
+	int input{};
+	std::cin >> input;
+	std::cout << "\n";
+
+	foodInventory.erase(foodInventory.begin() + input);
+
+	std::cout << "\n";
+
+	std::cout << "Item number " << input << " deleted...";
+}
+
+void Inventory::deleteElectronicItem()
+{
+	std::cout << "Type the number of the item you wish to delete ";
+	int input{};
+	std::cin >> input;
+	std::cout << "\n";
+
+	electronicInventory.erase(electronicInventory.begin() + input);
+
+	std::cout << "\n";
+
+	std::cout << "Item number " << input << " deleted...";
 }
