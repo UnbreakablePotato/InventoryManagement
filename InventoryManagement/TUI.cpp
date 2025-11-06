@@ -22,3 +22,9 @@ void addItemType() {
 	std::cout << "If you would like to add a electronic item, press 3" << "\n";
 
 }
+
+void deleteItemType() {
+	std::cout << "If you would like to delete a generic item, press 1" << "\n";
+	std::cout << "If you would like to delete a food item, press 2" << "\n";
+	std::cout << "If you would like to delete a electronic item, press 3" << "\n";
+}

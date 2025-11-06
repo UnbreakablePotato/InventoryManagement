@@ -20,5 +20,5 @@ public:
 	void listGenericItems();
 	void listFoodItems();
 	void listElectronicItems();
-
+	void listAll(Inventory T);
 };

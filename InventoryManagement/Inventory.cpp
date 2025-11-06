@@ -59,7 +59,7 @@ void Inventory::listGenericItems()
 	int count{-1};
 	for (auto i : genericInventory) {
 		count++;
-		std::cout << count << ". " << i.getItemName();
+		std::cout << count << ". " << i.getItemName() << "\n";
 	}
 }
 
@@ -68,7 +68,7 @@ void Inventory::listFoodItems()
 	int count{ -1 };
 	for (auto i : foodInventory) {
 		count++;
-		std::cout << count << ". " << i.getItemName();
+		std::cout << count << ". " << i.getItemName() << "\n";
 	}
 }
 
@@ -77,7 +77,7 @@ void Inventory::listElectronicItems()
 	int count{ -1 };
 	for (auto i : electronicInventory) {
 		count++;
-		std::cout << count << ". " << i.getItemName();
+		std::cout << count << ". " << i.getItemName() << "\n";
 	}
 }
 
@@ -123,4 +123,11 @@ void Inventory::deleteElectronicItem()
 	std::cout << "\n";
 
 	std::cout << "Item number " << input << " deleted...";
+}
+
+void Inventory::listAll(Inventory T)
+{
+	T.listGenericItems();
+	T.listFoodItems();
+	T.listElectronicItems();
 }

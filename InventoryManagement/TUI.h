@@ -8,4 +8,6 @@ void options();
 
 void addItemType();
 
+void deleteItemType();
+
 
