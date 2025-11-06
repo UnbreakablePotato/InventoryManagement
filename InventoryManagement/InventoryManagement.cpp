@@ -18,9 +18,7 @@ int main()
 
     while (input != 4) {
         if (input == 1) {
-            test.listGenericItems();
-            test.listFoodItems();
-            test.listElectronicItems();
+            test.listAll(test);
         }
         else if (input == 2) {
             addItemType();
@@ -35,9 +33,31 @@ int main()
             else if (inputSecondMode == 3) {
                 test.pushElectronicItem();
             }
+            else {
+                std::cout << "You entered input not defined in our logic. Try again...\n";
+            }
         }
         else if (input == 3) {
             //logic to delete items
+            deleteItemType();
+            int inputDelete{};
+            std::cin >> input;
+            if (inputDelete == 1) {
+                test.listGenericItems();
+                test.deleteGenericItem();
+            }
+            else if (inputDelete == 2) {
+                test.listFoodItems();
+                test.deleteFoodItem();
+            }
+            else if (inputDelete == 3) {
+                test.listElectronicItems();
+                test.deleteElectronicItem();
+            }
+            else {
+                test.listAll(test);
+            }
+
         }
         std::cout << std::endl;
         options();
