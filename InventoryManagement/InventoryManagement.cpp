@@ -38,10 +38,9 @@ int main()
             }
         }
         else if (input == 3) {
-            //logic to delete items
             deleteItemType();
             int inputDelete{};
-            std::cin >> input;
+            std::cin >> inputDelete;
             if (inputDelete == 1) {
                 test.listGenericItems();
                 test.deleteGenericItem();
